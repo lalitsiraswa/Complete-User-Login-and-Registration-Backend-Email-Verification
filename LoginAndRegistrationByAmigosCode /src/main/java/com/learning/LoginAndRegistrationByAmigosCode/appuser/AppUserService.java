@@ -27,6 +27,7 @@ public class AppUserService implements UserDetailsService {
         appUser.setPassword(encodedPassword);
         appUserRepository.save(appUser);
 //      TODO: Send Conformation Token
+        
         return "User Registration Successfully!";
     }
 }
