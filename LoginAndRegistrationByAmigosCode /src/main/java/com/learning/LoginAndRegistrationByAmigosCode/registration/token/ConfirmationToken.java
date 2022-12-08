@@ -31,7 +31,7 @@ public class ConfirmationToken {
     private LocalDateTime createdAt;
     @Column(nullable = false)
     private LocalDateTime expiresAt;
-    private LocalDateTime confirmedAt;
+    private LocalDateTime confirmedAt = null;
 
 //  One Application User Can Have Many Confirmation Token (Many: Application User to One: Token)
     @ManyToOne
@@ -42,11 +42,10 @@ public class ConfirmationToken {
     )
     private AppUser appUser;
 
-    public ConfirmationToken(String token, LocalDateTime createdAt, LocalDateTime expiresAt, LocalDateTime confirmedAt, AppUser appUser) {
+    public ConfirmationToken(String token, LocalDateTime createdAt, LocalDateTime expiresAt, AppUser appUser) {
         this.token = token;
         this.createdAt = createdAt;
         this.expiresAt = expiresAt;
-        this.confirmedAt = confirmedAt;
         this.appUser = appUser;
     }
 }
