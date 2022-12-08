@@ -28,3 +28,5 @@ volumes:
 # \d It shows all relations (Including tables and sequence)
 # \d customer to see the description about the customer table
 # \d app_user used to describe the table structure
+# \q will quit the session and if I want to connect to some other DB then I'd need to \q and then \c again.
+# \x Expanded display is on (Show the table Vertically).
