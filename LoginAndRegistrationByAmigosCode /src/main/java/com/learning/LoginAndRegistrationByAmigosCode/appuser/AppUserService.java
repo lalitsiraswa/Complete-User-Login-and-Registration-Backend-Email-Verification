@@ -42,7 +42,8 @@ public class AppUserService implements UserDetailsService {
         );
         confirmationTokenService.saveConfirmationToken(confirmationToken);
 //      TODO: SEND EMAIL
-        return String.format("User Registration Token: %s Has Benn Saved Successfully!", token);
+//        return String.format("User Registration Token: %s Has Benn Saved Successfully!", token);
+        return token;
     }
 
     public int enableAppUser(String email) {
