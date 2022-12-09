@@ -44,4 +44,15 @@ public class AppUserService implements UserDetailsService {
 //      TODO: SEND EMAIL
         return String.format("User Registration Token: %s Has Benn Saved Successfully!", token);
     }
+
+    public int enableAppUser(String email) {
+        return appUserRepository.enableAppUser(email);
+    }
+
+//    public void enableAppUser(String email) {
+//        AppUser appUser = appUserRepository.findByEmail(email)
+//                .orElseThrow(() ->
+//                        new IllegalStateException(String.format("Email: %s not found!", email)));
+//        appUser.setEnabled(true);
+//    }
 }
