@@ -33,3 +33,5 @@ volumes:
 
 # MAILDEV : https://github.com/maildev/maildev
 # docker run -p 1080:1080 -p 1025:1025 maildev/maildev
+
+# update confirmation_token set expires_at = now() - interval '1 day' where id=2; updating the expires_at time
